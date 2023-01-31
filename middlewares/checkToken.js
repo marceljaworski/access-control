@@ -2,7 +2,8 @@ import token from "../lib/token.js";
 
 function checkToken(req, res, next) {
     try {
-        token.verifyToken(req.body.token);
+        const payload = token.verifyToken(req.body.token);
+        req.user = payload;
         next();
     } catch (error) {
         console.error(error);

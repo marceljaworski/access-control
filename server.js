@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+
 import checkToken from "./middlewares/checkToken.js";
 import authRouter from "./routes/auth.js";
 import protectedRouter from "./routes/protectedRoutes.js";

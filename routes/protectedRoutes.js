@@ -1,11 +1,11 @@
 import { Router } from "express";
 import checkRole from "../middlewares/checkRole.js";
-import checkUserAccess from "../middlewares/checkUserAcces.js";
+import checkUserAccess from "../middlewares/checkUserAccess.js";
 
 
 const router = Router();
 
-router.post("/", /*checkRole(["Editor", "Admin"])*/ checkUserAccess("POST"), (req, res, next) => {
+router.post("/", /*checkRole(["Editor", "Admin"])*/ checkUserAccess, (req, res, next) => {
     res.status(201).end();
 });
 router.get("/", checkRole(["User"]), (req, res, next) => {

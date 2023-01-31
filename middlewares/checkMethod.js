@@ -4,5 +4,4 @@ function checkMethod(req, res, next) {
     }
     next();
 }
-
 export default checkMethod;

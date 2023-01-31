@@ -20,7 +20,7 @@ const users = [
         id: 3,
         username: "user3",
         role: "Editor",
-        access: ["POST"]
+        access: ["createFoto"]
     },
     {
         id: 4,

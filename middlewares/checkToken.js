@@ -4,6 +4,7 @@ function checkToken(req, res, next) {
     try {
         const payload = token.verifyToken(req.body.token);
         req.user = payload;
+        console.log(payload)
         next();
     } catch (error) {
         console.error(error);
